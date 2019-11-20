@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "name": "Rza",
+    "image": "https://cdn.livekindly.co/wp-content/uploads/2018/01/rza-e1551850425334.jpeg",
+    "alias": "The Abbott",
+    "location": "Staten Island"
+  },
+  {
+    "id": 2,
+    "name": "Gza",
+    "image": "https://i.pinimg.com/originals/73/61/3c/73613c0101f11c87fcaf75731606813e.jpg",
+    "alias": "Genius",
+    "location": "Brooklyn"
+  },
+  {
+    "id": 3,
+    "name": "Ol' Dirty Bastard",
+    "image": "https://wutangclan.net/wp-content/uploads/2019/03/dirty.png",
+    "alias": "Dirt McGirt",
+    "location": "Brooklyn Zoo"
+  },
+  {
+    "id": 4,
+    "name": "Inspectah Deck",
+    "image": "https://static.hiphopdx.com/2013/09/inspectah-deck_09-23-2013.jpg",
+    "alias": "The Rebel INS",
+    "location": "Shaolin"
+  },
+  {
+    "id": 5,
+    "name": "Raekwon",
+    "image": "https://townsquare.media/site/812/files/2017/04/RaeKwon-Mike-TSM.jpg?w=980&q=75",
+    "alias": "The Chef",
+    "location": "The Kitchen"
+  },
+  {
+    "id": 6,
+    "name": "U God",
+    "image": "https://images.squarespace-cdn.com/content/v1/520ed800e4b0229123208764/1385528653183-ONU4DXPHNER5K4LK8K2G/ke17ZwdGBToddI8pDm48kBIkQ6BpXxi_9dtfIasthhVZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpzSaLj8w0YDPn2WHB8GJ_LztSXmqlyOsVSt0NebUuTxNFM_pkrYYVyX5hyB9gpLD9Y/blacknwhite.jpg",
+    "alias": "Golden Armz",
+    "location": "Shaolin"
+  },
+  {
+    "id": 7,
+    "name": "Ghostface Killah",
+    "image": "https://image-ticketfly.imgix.net/00/01/41/09/19-og.jpg?w=500&h=334&fit=crop&crop=top",
+    "alias": "Iron Man",
+    "location": "Staten Island"
+  },
+  {
+    "id": 8,
+    "name": "Method Man",
+    "image": "https://ents24.imgix.net/image/000/155/568/b87273c02f9a6be3592e9e4bdb20a762acc1c774.jpg?auto=format&fit=crop&crop=faces&w=439",
+    "alias": "Johnny Blaze",
+    "location": "Staten Island"
+  },
+  {
+    "id": 9,
+    "name": "Masta Killa",
+    "image": "https://static.hiphopdx.com/2012/11/Masta_Killa-RZA-hhdx.jpg",
+    "alias": "High Chief",
+    "location": "Brooklyn"
+  },
+  {
+    "id": 10,
+    "name": "Cappadonna",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0EaxU3mmjge_wm8O89zzv4KtM-j4IRspe-5pv7lUx3dD3kvCvFw&s",
+    "alias": "Cappuccino",
+    "location": "Staten Island"
+  }
+]
