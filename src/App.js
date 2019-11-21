@@ -21,7 +21,7 @@ class App extends Component {
   render() {
     return (
       <Wrapper>
-        <Title>Wu Tang Clan</Title>
+        <Title>WU TANG CLAN</Title>
         {this.state.friends.map(friend => (
           <FriendCard
             //removeFriend={this.removeFriend}
