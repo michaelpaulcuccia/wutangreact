@@ -4,7 +4,7 @@
     "name": "Rza",
     "image": "https://cdn.livekindly.co/wp-content/uploads/2018/01/rza-e1551850425334.jpeg",
     "alias": "The Abbott",
-    "location": "Staten Island"
+    "location": "Shaolin"
   },
   {
     "id": 2,
@@ -46,14 +46,14 @@
     "name": "Ghostface Killah",
     "image": "https://i.pinimg.com/originals/23/40/a2/2340a2577e7d61ebe8a4f5446e75e2a5.jpg",
     "alias": "Iron Man",
-    "location": "Staten Island"
+    "location": "Shaolin"
   },
   {
     "id": 8,
     "name": "Method Man",
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuaVLmAor1OS0gkKRsBrT9DmJnTE8UNbfpIMvdSSTvWA2aBxED&s",
     "alias": "Johnny Blaze",
-    "location": "Staten Island"
+    "location": "Shaolin"
   },
   {
     "id": 9,
@@ -67,6 +67,6 @@
     "name": "Cappadonna",
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0EaxU3mmjge_wm8O89zzv4KtM-j4IRspe-5pv7lUx3dD3kvCvFw&s",
     "alias": "Cappuccino",
-    "location": "Staten Island"
+    "location": "Shaolin"
   }
 ]
