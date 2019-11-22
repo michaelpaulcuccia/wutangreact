@@ -1,84 +1,117 @@
-import React, { Component } from "react";
+//created from both App.js file combined
+
+import React, {Component} from "react";
 import FriendCard from "./components/FriendCard";
-import Wrapper from "./components/Wrapper";
-import Title from "./components/Title";
+//import Wrapper from "./components/Wrapper";
+//import Container from './components/Container';
+import Jumbotron from './components/Jumbotron';
+//import Title from "./components/Title";
+import Row from './components/Row';
+//import Column from './components/Column';
 import friends from "./friends.json";
 
-//let friendArray = friends.json;
-
-let array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-
-let arrayShuffle = function(arr) {
-    let newPosition,
-        tempPosition;
-    
-        for (let i = arr.length - 1; i > 0; i--) {
-            newPosition = Math.floor(Math.random() * (i + 1));
-            tempPosition = arr[i];
-            arr[i] = arr[newPosition];
-            arr[newPosition] = tempPosition;
-        }
-
-        return arr;
-};
-
-//let newArray = arrayShuffle(array);
-//console.log(newArray);
-
 class App extends Component {
-  // Setting this.state.friends to the friends json array
   state = {
     friends,
-    order: arrayShuffle(array),
-    clicked: []
+    clicked: [],
+    highScore: 0
   };
 
-  picClicked=(id)=>{
-    console.log(this.state.clicked)
-    let clicked=this.state.clicked
-    console.log(id)
-    if(clicked.includes(id)){
-      //you lose
-      console.log("clicked")
-    }else{
-      //you haven't lost yet
-      console.log("not clicked")
+  //friends = choices 
+
+  componentDidMount() {
+    this.setState({
+      friends: this.randomize(this.state.friends)
+    });
+  }
+
+  randomize = array => {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
     }
-    clicked.push(id)
-    this.setState({clicked})   
+
+    return array;
+  };
+
+  handleClickOnImage = id => {
+    // this is loss condition
+    if (this.state.clicked.includes(id)) {
+      alert('you lost');
+      this.resetGame();
+    } else {
+
+      this.setState(
+        prevState => ({
+          clicked: [...prevState.clicked, id],
+          friends: this.randomize(this.state.friends)
+        }),
+        () => {
+          this.checkHighScore();
+          this.handleWin();
+        }
+      );
+    }
+  };
+
+  checkHighScore = () => {
+    if (this.state.clicked.length > this.state.highScore) {
+      this.setState({
+        highScore: this.state.clicked.length
+      });
+    }
+  };
+
+  handleWin = () => {
+    if (this.state.clicked.length === this.state.friends.length) {
+      alert('You won!');
+      this.resetGame();
+    }
+  };
+  resetGame=()=>{
+    this.setState({clicked: []})
+    this.randomize(this.state.friends)
   }
 
-  // removeFriend = id => {
-  //   // Filter this.state.friends for friends with an id not equal to the id being removed
-  //   const friends = this.state.friends.filter(friend => friend.id !== id);
-  //   // Set this.state.friends equal to the new friends array
-  //   this.setState({ friends });
-  // };
+  //componentDidMount 
+  //randmonize
+  //handleClickOnImage
+  //checkHighScore
+  //handlewin 
 
-  // Map over this.state.friends and render a FriendCard component for each friend object
   render() {
+    // always console.log state in the render it will give you the freshest state. or use React Dev Tools.
+    console.log(this.state);
+    // don't have to write this.state over and over if we destructure here
+    const { clicked, friends, highScore } = this.state;
     return (
-      <Wrapper>
-              <Title>WU TANG CLAN</Title>
-          {this.state.order.map((number,index)=>(
-       // {this.state.friends.map(friend => (
-          <FriendCard
-            //removeFriend={this.removeFriend}
-            id={this.state.friends[number].id}
-            key={this.state.friends[number].id}
-            name={this.state.friends[number].name}
-            image={this.state.friends[number].image}
-            alias={this.state.friends[number].alias}
-            location={this.state.friends[number].location}
-            handleClick= {this.picClicked}
+      <div>
+        <Jumbotron score={clicked.length} highScore={highScore} dark />
+        <Row helper={`justify-content-center`}>
+          {friends.map( ({id, name, image, alias, location}) => {
             
-          />
-        ))}
-      </Wrapper>
-    );
-  }
+             
+                return(
+                <FriendCard header={name} 
+                    dark
+                    id={id}
+                    key={id}
+                    name={name}
+                    image={image}
+                    alias={alias}
+                    location={location}
+                    handleClick= {this.handleClickOnImage}
+                    />
+          )}
+          )}
+           
+        </Row>
+      </div>
+       )
+
+     }
 }
 
-
-
 export default App;
+
+ 
