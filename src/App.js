@@ -1,13 +1,7 @@
-//created from both App.js file combined
-
 import React, {Component} from "react";
 import FriendCard from "./components/FriendCard";
-//import Wrapper from "./components/Wrapper";
-//import Container from './components/Container';
 import Jumbotron from './components/Jumbotron';
-//import Title from "./components/Title";
 import Row from './components/Row';
-//import Column from './components/Column';
 import friends from "./friends.json";
 
 class App extends Component {
@@ -16,8 +10,6 @@ class App extends Component {
     clicked: [],
     highScore: 0
   };
-
-  //friends = choices 
 
   componentDidMount() {
     this.setState({
@@ -72,25 +64,15 @@ class App extends Component {
     this.setState({clicked: []})
     this.randomize(this.state.friends)
   }
-
-  //componentDidMount 
-  //randmonize
-  //handleClickOnImage
-  //checkHighScore
-  //handlewin 
-
+  
   render() {
-    // always console.log state in the render it will give you the freshest state. or use React Dev Tools.
     console.log(this.state);
-    // don't have to write this.state over and over if we destructure here
-    const { clicked, friends, highScore } = this.state;
+      const { clicked, friends, highScore } = this.state;
     return (
       <div>
         <Jumbotron score={clicked.length} highScore={highScore} dark />
         <Row helper={`justify-content-center`}>
-          {friends.map( ({id, name, image, alias, location}) => {
-            
-             
+          {friends.map( ({id, name, image, alias, location}) => {     
                 return(
                 <FriendCard header={name} 
                     dark
@@ -104,11 +86,9 @@ class App extends Component {
                     />
           )}
           )}
-           
         </Row>
       </div>
        )
-
      }
 }
 
