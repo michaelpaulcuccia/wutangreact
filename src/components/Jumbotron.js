@@ -9,10 +9,10 @@ const Jumbtron = props => {
       } `}>
       {/* TAKE STYLE OUT JUST TO MAKE A POINT */}
       <span className="m-3" style={{ fontSize: 30 }}>
-        Score: {props.score}
+      Score: {props.score}
       </span>
       <span className="m-3" style={{ fontSize: 30 }}>
-        High Score: {props.highScore}
+      High Score: {props.highScore}
       </span>
     </div>
   );
