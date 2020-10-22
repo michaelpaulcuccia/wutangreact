@@ -1,5 +1,7 @@
-#wutangforever 
+# wutangreact
 
-> Memory Game Application.
+https://michaelpaulcuccia.github.io/wutangreact/
 
-Technologies: HTML, CSS, JavaScript, React.js, React-Router-Dom.
+Memory Game Application.
+
+- Technologies: HTML, CSS, JavaScript, React.js, React-Router-Dom.
